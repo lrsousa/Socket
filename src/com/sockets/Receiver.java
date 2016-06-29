@@ -1,6 +1,7 @@
 package com.sockets;
 
 import java.io.InputStream;
+import java.time.LocalTime;
 import java.util.Scanner;
 
 public class Receiver implements Runnable {
@@ -16,7 +17,7 @@ public class Receiver implements Runnable {
 		Scanner s = new Scanner(this.server);
 
         while (s.hasNextLine()) {
-            System.out.println(s.nextLine());
+            System.out.println("Hora envio: " + s.nextLine() + "Hora recebimento: " + LocalTime.now());
         }
     }
 }

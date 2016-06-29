@@ -40,7 +40,7 @@ public class Server {
 
     public void distribuiMensagem(String msg) {
         for (PrintStream cliente : this.clients){
-            cliente.println(msg);
+            cliente.println("opa" + msg);
         }
     }
 }

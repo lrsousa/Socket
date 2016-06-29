@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.time.LocalTime;
 import java.util.Scanner;
 
 public class Client {
@@ -27,7 +28,7 @@ public class Client {
         Scanner keyboard = new Scanner(System.in);
         PrintStream out = new PrintStream(client.getOutputStream());
         while (keyboard.hasNextLine()) {
-            out.println(keyboard.nextLine());
+            out.println(LocalTime.now() + " - " +  keyboard.nextLine());
         }
 
         out.close();
