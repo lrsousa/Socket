@@ -27,9 +27,13 @@ public class Client {
         // lê msgs do teclado e manda pro servidor
         Scanner keyboard = new Scanner(System.in);
         PrintStream out = new PrintStream(client.getOutputStream());
-        while (keyboard.hasNextLine()) {
-            out.println(LocalTime.now() + " - " +  keyboard.nextLine());
+        
+        for(int i = 0; i < 3000; i++) {
+        	out.println(LocalTime.now() + " - ");
         }
+//        while (keyboard.hasNextLine()) {
+//            out.println(LocalTime.now() + " - " +  keyboard.nextLine());
+//        }
 
         out.close();
         keyboard.close();
